@@ -1,0 +1,2 @@
+nexus_4wd_mecanum_simulator/nexus_4wd_mecanum_description:nexus_4wd_mecanum_simulator/nexus_4wd_mecanum_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/dheer/ws/devel -DCMAKE_INSTALL_PREFIX=/home/dheer/ws/install -G Unix Makefiles
