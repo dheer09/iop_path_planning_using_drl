@@ -16,6 +16,8 @@ def newOdom(msg):
     x = msg.pose.pose.position.x
     y = msg.pose.pose.position.y
 
+    rospy.loginfo(rospy.get_caller_id() + "I heard %s", x)
+
     rot_q = msg.pose.pose.orientation
     (roll, pitch, theta) = euler_from_quaternion([rot_q.x, rot_q.y, rot_q.z, rot_q.w])
 
@@ -29,8 +31,8 @@ speed = Twist()
 r = rospy.Rate(4)
 
 goal = Point()
-goal.x = 0
-goal.y = 0
+goal.x = 5
+goal.y = 5
 
 while not rospy.is_shutdown():
     inc_x = goal.x -x
